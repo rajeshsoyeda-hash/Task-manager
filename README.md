@@ -2,7 +2,7 @@
 
 A modern, full-stack task management web app with user authentication, CRUD operations, Kanban board, and real-time updates.
 
-🔗 **Live Site:** [rajeshsoyeda-hash.github.io/taskmanager](https://rajeshsoyeda-hash.github.io/taskmanager/)  
+🔗 **Live Site:** [rajeshsoyeda-hash.github.io/taskmanager](https://rajeshsoyeda-hash.github.io/Taskmanager/)  
 🐙 **GitHub:** [github.com/rajeshsoyeda-hash/taskmanager](https://github.com/rajeshsoyeda-hash/taskmanager)
 
 ---
