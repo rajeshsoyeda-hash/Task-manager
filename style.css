@@ -1458,3 +1458,22 @@ body::before {
   .stats-row { grid-template-columns: 1fr 1fr; }
   .kanban-board { grid-template-columns: 1fr; }
 }
+
+/* UTILITY CLASSES */
+#importFileInput { display: none; }
+.icon-search { width: 16px; height: 16px; color: var(--muted2); }
+.icon-sm { width: 16px; height: 16px; }
+.icon-xs { width: 14px; height: 14px; }
+.modal-sm { max-width: 400px; }
+.confirm-body { font-size: 0.9rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.5rem; }
+.modal-btn-row { display: flex; gap: 10px; }
+.btn-modal-cancel {
+  flex: 1; padding: 0.75rem; background: var(--bg3);
+  border: 1px solid var(--border2); border-radius: var(--r);
+  color: var(--text); font-family: var(--font); font-weight: 600; cursor: pointer;
+}
+.btn-modal-confirm {
+  flex: 1; padding: 0.75rem; background: var(--red);
+  border: none; border-radius: var(--r);
+  color: white; font-family: var(--font); font-weight: 700; cursor: pointer;
+}

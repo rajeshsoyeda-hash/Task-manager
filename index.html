@@ -14,7 +14,6 @@
 <!-- Custom Stylesheet -->
 <link rel="stylesheet" href="style.css">
 </head>
-</head>
 <body>
 
 <!-- ─── AUTH SCREEN ─── -->
@@ -132,7 +131,7 @@
         <button class="btn-sidebar-action" onclick="document.getElementById('importFileInput').click()">
           <i data-lucide="upload"></i> Import Tasks JSON
         </button>
-        <input type="file" id="importFileInput" accept=".json" style="display:none" onchange="importTasksJSON(event)">
+        <input type="file" id="importFileInput" accept=".json" onchange="importTasksJSON(event)">
         <button class="btn-sidebar-action logout-btn" onclick="confirmClearCompleted()">
           <i data-lucide="trash-2"></i> Clear Completed
         </button>
@@ -146,12 +145,12 @@
     <div class="main">
       <!-- TOPBAR -->
       <div class="topbar">
-        <button class="hamburger" onclick="toggleSidebar()">
+        <button class="hamburger" onclick="toggleSidebar()" title="Toggle Sidebar" aria-label="Toggle Sidebar">
           <i data-lucide="menu"></i>
         </button>
         <div class="topbar-title" id="topbarTitle">All Tasks</div>
         <div class="search-box">
-          <i data-lucide="search" style="width:16px;height:16px;color:var(--muted2)"></i>
+          <i data-lucide="search" class="icon-search"></i>
           <input type="text" placeholder="Search tasks..." id="searchInput" oninput="renderTasks()">
         </div>
         <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode" id="themeToggleBtn">
@@ -161,7 +160,7 @@
           <div class="rt-dot"></div> Live
         </div>
         <button class="add-task-btn" onclick="openModal()">
-          <i data-lucide="plus" style="width:16px;height:16px"></i> New Task
+          <i data-lucide="plus" class="icon-sm"></i> New Task
         </button>
       </div>
 
@@ -206,15 +205,15 @@
         <div class="view-controls">
           <div class="view-tabs">
             <button class="view-tab active" onclick="switchViewMode('list', this)">
-              <i data-lucide="list" style="width:14px;height:14px"></i> List
+              <i data-lucide="list" class="icon-xs"></i> List
             </button>
             <button class="view-tab" onclick="switchViewMode('kanban', this)">
-              <i data-lucide="kanban" style="width:14px;height:14px"></i> Kanban
+              <i data-lucide="kanban" class="icon-xs"></i> Kanban
             </button>
           </div>
 
           <div class="controls-right">
-            <select class="sort-select" id="sortSelect" onchange="renderTasks()">
+            <select class="sort-select" id="sortSelect" onchange="renderTasks()" title="Sort Tasks" aria-label="Sort Tasks">
               <option value="created">Sort by: Date Created</option>
               <option value="due">Sort by: Due Date</option>
               <option value="priority">Sort by: Priority</option>
@@ -337,7 +336,7 @@
         <label class="form-label">Sub-tasks / Checklist</label>
         <div class="subtask-input-list" id="subtaskInputList"></div>
         <button type="button" class="btn-add-subtask" onclick="addSubtaskRow()">
-          <i data-lucide="plus" style="width:14px;height:14px"></i> Add Sub-task Item
+          <i data-lucide="plus" class="icon-xs"></i> Add Sub-task Item
         </button>
       </div>
 
@@ -348,17 +347,17 @@
 
 <!-- CONFIRMATION MODAL -->
 <div class="modal-overlay" id="confirmModal">
-  <div class="modal" style="max-width:400px">
+  <div class="modal modal-sm">
     <div class="modal-header">
       <div class="modal-title" id="confirmTitle">Confirm Action</div>
       <button class="modal-close" onclick="closeConfirmModal()">✕</button>
     </div>
-    <div style="font-size:0.9rem;color:var(--muted);line-height:1.5;margin-bottom:1.5rem" id="confirmMessage">
+    <div class="confirm-body" id="confirmMessage">
       Are you sure you want to perform this action?
     </div>
-    <div style="display:flex;gap:10px">
-      <button style="flex:1;padding:0.75rem;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);color:var(--text);font-family:var(--font);font-weight:600;cursor:pointer" onclick="closeConfirmModal()">Cancel</button>
-      <button style="flex:1;padding:0.75rem;background:var(--red);border:none;border-radius:var(--r);color:white;font-family:var(--font);font-weight:700;cursor:pointer" id="confirmActionBtn">Confirm</button>
+    <div class="modal-btn-row">
+      <button class="btn-modal-cancel" onclick="closeConfirmModal()">Cancel</button>
+      <button class="btn-modal-confirm" id="confirmActionBtn">Confirm</button>
     </div>
   </div>
 </div>
