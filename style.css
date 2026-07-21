@@ -1477,3 +1477,22 @@ body::before {
   border: none; border-radius: var(--r);
   color: white; font-family: var(--font); font-weight: 700; cursor: pointer;
 }
+
+.sidebar-dev-credit {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.6rem;
+  margin-top: 0.4rem;
+  border-top: 1px dashed var(--border2);
+}
+
+.sidebar-dev-credit a {
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sidebar-dev-credit a:hover {
+  text-decoration: underline;
+}

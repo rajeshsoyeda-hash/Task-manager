@@ -125,10 +125,12 @@ Task Routes (Protected):
 
 ---
 
-## 📬 Contact
+## 👨‍💻 Developer Information
 
-- 🐙 GitHub: [github.com/rajeshsoyeda-hash](https://github.com/rajeshsoyeda-hash)
-- 📧 Email: your.email@gmail.com
+- **Developer:** Rajesh Soyeda
+- **GitHub:** [@rajeshsoyeda-hash](https://github.com/rajeshsoyeda-hash)
+- **Repository:** [Task-manager](https://github.com/rajeshsoyeda-hash/Task-manager)
+- **Live Demo:** [rajeshsoyeda-hash.github.io/Task-manager](https://rajeshsoyeda-hash.github.io/Task-manager/)
 
 ---
 
